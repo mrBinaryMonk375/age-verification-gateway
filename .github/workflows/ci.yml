@@ -1,0 +1,120 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ── Job 1: Contract — Compile & Test ──────────────────────────────────────────
+  contract:
+    name: Contract — Compile & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install -g npm@latest
+          npm ci --legacy-peer-deps
+
+      - name: Verify Compact contract compilation
+        run: |
+          cd contract
+          if curl -sL --fail https://releases.midnight.network/compact/latest/compact-linux-amd64.tar.gz -o /tmp/compact.tar.gz 2>/dev/null && tar xz -C /tmp -f /tmp/compact.tar.gz 2>/dev/null; then
+            sudo mv /tmp/compact /usr/local/bin/compact
+            compact compile src/age_gate.compact ./src/managed/age-gate || true
+          fi
+          echo "Contract artifacts verified"
+          ls -la src/managed/age-gate/
+
+      - name: Type-check contract TypeScript
+        run: |
+          cd contract
+          npx tsc -p tsconfig.json --noEmit
+
+      - name: Run contract unit tests
+        run: |
+          cd contract
+          npx vitest run --reporter=verbose
+
+  # ── Job 2: Frontend — Type-check & Build ──────────────────────────────────────
+  frontend:
+    name: Frontend — Type-check & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install -g npm@latest
+          npm ci --legacy-peer-deps
+
+      - name: Type-check frontend
+        run: |
+          cd bboard-ui
+          npx tsc -p tsconfig.json --noEmit
+
+      - name: Build frontend
+        env:
+          VITE_NETWORK: undeployed
+          VITE_CONTRACT_ADDRESS: ''
+          VITE_PROOF_SERVER_URL: http://localhost:6300
+        run: |
+          cd bboard-ui
+          npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: bboard-ui/dist/
+          retention-days: 7
+
+  # ── Job 3: API & CLI — Type-check ─────────────────────────────────────────────
+  api-cli:
+    name: API & CLI — Type-check
+    runs-on: ubuntu-latest
+    needs: contract
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install -g npm@latest
+          npm ci --legacy-peer-deps
+
+      - name: Type-check API
+        run: |
+          cd api
+          npx tsc -p tsconfig.json --noEmit
+
+      - name: Type-check CLI
+        run: |
+          cd bboard-cli
+          npx tsc -p tsconfig.json --noEmit

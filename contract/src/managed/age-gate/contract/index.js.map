@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../../",
+  "sources": ["src/age_gate.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAwBA;;;;;;;;;;;;;MAQA,AAAA,SASC;;;;;cATwB,aAAqB;;;;;;;;;;;;;;;;;;yCAArB,aAAqB;;;;;;;;;2CAArB,aAAqB;;;OAS7C;MAED,AAAA,eAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;GAjBA;EAJD;;;;;UAAY,QAAgB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAR5B;;;;;;;;;yEAAyC;IAEzC;;;;;;;;;yEAAkC;IAElC;;;;;;;;;yEAAmC;IAEnC;;;;;;;;;yEAAmC;IAGjC;;;;;;;2HAAsB,QAAM;;yEAAlB;IACV;;;;;;;;;yEAAU;IACV;;;;;;;;;yEAAW;;;;;;;GACZ;EAED,AAAA,iBAAmC;;0DAAnC,cAAmC;;;;;;;;;;;;;;GAAA;EAEnC,AAAA,YASC,4BATwB,aAAqB;oDACrC;;;;;;;;;;;yHAAW;;;;UACZ,WAA4B;4BAC3B,WAAS;;4BACT,aAAW,IAAI,WAAS;;UACzB,KAA6B,4BAAvB,aAAW,IAAG,WAAS;;mBAAvB,aAAW,GAAG,WAAS;4BAC5B,KAAG;;oDAAI;;;;;;;;;;;yHAAU;;IACxB;;;;;;;;;yEAAU;UACV,KAAiB;IAAjB;;;;;;;;;;6FAAA,KAAiB;;;;wEAAA;;GAClB;EAED,AAAA,kBAEC;IADC;;;;;;;;;yEAAU;;GACX;;;;;;;;;;;;;;;;IA7BD;qCAAA;;;;;;;;;;;0GAAyC;KAAA;IAEzC;qCAAA;;;;;;;;;;;0GAAkC;KAAA;IAElC;qCAAA;;;;;;;;;;;0GAAmC;KAAA;IAEnC;qCAAA;;;;;;;;;;;0GAAmC;KAAA;;;;;;;;;;"
+}

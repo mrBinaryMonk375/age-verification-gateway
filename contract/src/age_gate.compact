@@ -1,0 +1,46 @@
+// Age Verification Gateway - Compact Contract
+// SPDX-License-Identifier: Apache-2.0
+//
+// Privacy Model:
+//   PRIVATE:  The user birth year - stored as private witness, NEVER disclosed on-chain
+//   PUBLIC:   verificationCount - how many total verifications have been submitted
+//   PUBLIC:   lastResult - boolean pass/fail of the most recent verification
+//   PUBLIC:   minimumAge - the age threshold being enforced (policy is public)
+//
+// Observers CAN see: total count, last pass/fail result, age threshold.
+// Observers CANNOT see: who verified, what birth year, actual computed age.
+
+pragma language_version 0.23;
+
+import CompactStandardLibrary;
+
+export ledger verificationCount: Counter;
+
+export ledger lastResult: Boolean;
+
+export ledger minimumAge: Uint<64>;
+
+export ledger initialized: Boolean;
+
+constructor(minAge: Uint<64>) {
+  minimumAge = disclose(minAge);
+  lastResult = disclose(false);
+  initialized = disclose(true);
+}
+
+witness localBirthYear(): Uint<64>;
+
+export circuit verifyAge(currentYear: Uint<64>): [] {
+  assert(initialized == true, "Contract not initialized");
+  const birthYear = localBirthYear();
+  assert(birthYear >= (1900 as Uint<64>), "Birth year must be 1900 or later");
+  assert(currentYear >= birthYear, "Current year cannot be before birth year");
+  const age = currentYear - birthYear;
+  assert(age >= minimumAge, "Age requirement not met");
+  lastResult = disclose(true);
+  verificationCount.increment(1);
+}
+
+export circuit resetLastResult(): [] {
+  lastResult = disclose(false);
+}

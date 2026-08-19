@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+*.log
+logs/
+.midnight-state.json
+*.midnight-state.json
+.env
+!.env.example
+*.local
+.DS_Store
+Thumbs.db
+coverage/
+.nyc_output/
+*.tsbuildinfo
+.vercel

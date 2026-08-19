@@ -1,0 +1,6 @@
+{
+  "name": "age-verification-gateway",
+  "buildCommand": "npm run build --workspace=bboard-ui",
+  "outputDirectory": "bboard-ui/dist",
+  "installCommand": "npm install"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@midnight-ntwrk/age-gate-contract",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node -e \"fs.rmSync('dist', {recursive: true, force: true})\" && tsc --project tsconfig.build.json && node -e \"fs.cpSync('src/managed', 'dist/managed', {recursive: true}); fs.copyFileSync('src/age_gate.compact', 'dist/age_gate.compact')\"",
+    "ci": "npm run compact && npm run typecheck && npm run lint && npm run build && npm run test",
+    "compact": "compact compile src/age_gate.compact ./src/managed/age-gate",
+    "lint": "eslint src",
+    "prepack": "npm run build",
+    "test": "npx vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
+    "@typescript-eslint/eslint-plugin": "^8.61.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "globals": "^17.6.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
