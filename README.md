@@ -1,17 +1,17 @@
-# Age Verification Gateway (AVG)
+﻿# Age Verification Gateway (AVG)
 
 A privacy-preserving zero-knowledge age verification platform built on the Midnight Network using Compact smart contracts.
 
 ![Midnight](https://img.shields.io/badge/MIDNIGHT-PREPROD-7050ff?style=flat-square) ![Smart Contract](https://img.shields.io/badge/SMART_CONTRACT-COMPACT-7050ff?style=flat-square) ![Node.js](https://img.shields.io/badge/NODE.JS-%3E%3D22.0.0-00b074?style=flat-square)
-![Frontend](https://img.shields.io/badge/FRONTEND-REACT_%2B_VITE-00b4d8?style=flat-square) ![License](https://img.shields.io/badge/LICENSE-APACHE_2.0-64748b?style=flat-square) [![CI](https://img.shields.io/github/actions/workflow/status/naskarsayan369-create/age-verification-gateway/ci.yml?label=CI%20%E2%80%94%20Age%20Verification%20Gateway&style=flat-square)](https://github.com/naskarsayan369-create/age-verification-gateway/actions/workflows/ci.yml)
+![Frontend](https://img.shields.io/badge/FRONTEND-REACT_%2B_VITE-00b4d8?style=flat-square) ![License](https://img.shields.io/badge/LICENSE-APACHE_2.0-64748b?style=flat-square) [![CI](https://img.shields.io/github/actions/workflow/status/mrBinaryMonk375/age-verification-gateway/ci.yml?label=CI%20%E2%80%94%20Age%20Verification%20Gateway&style=flat-square)](https://github.com/mrBinaryMonk375/age-verification-gateway/actions/workflows/ci.yml)
 
 ---
 
 ## 🚀 Live Demo, Video & Repository
 
-* 🌐 **Live Web Application:** [https://age-verification-gateway-hm6wh4rog.vercel.app/](https://age-verification-gateway-hm6wh4rog.vercel.app/)
+* 🌐 **Live Web Application:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)
 * 📺 **Demo Video:** [https://youtu.be/cSVF8q7BSUM](https://youtu.be/cSVF8q7BSUM)
-* 📦 **GitHub Repository:** [https://github.com/naskarsayan369-create/age-verification-gateway](https://github.com/naskarsayan369-create/age-verification-gateway)
+* 📦 **GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)
 * ⚙️ **CI/CD Workflow:** `.github/workflows/ci.yml`
 
 ---
@@ -19,11 +19,11 @@ A privacy-preserving zero-knowledge age verification platform built on the Midni
 ## 📋 Challenge Requirements & Passing Checklist
 
 - [x] **Fully Functional Privacy dApp:** Meaningful use of Midnight's Zero-Knowledge privacy model
-- [x] **Live Demo Deployment:** [https://age-verification-gateway-hm6wh4rog.vercel.app/](https://age-verification-gateway-hm6wh4rog.vercel.app/)
+- [x] **Live Demo Deployment:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)
 - [x] **Demo Video (Lace Wallet + ZK Circuit Call):** [https://youtu.be/cSVF8q7BSUM](https://youtu.be/cSVF8q7BSUM)
 - [x] **Passing Test Suite:** 8/8 Vitest unit tests passing (`npm test`)
 - [x] **CI/CD Pipeline Running:** GitHub Actions workflow running automated build & tests (`.github/workflows/ci.yml`)
-- [x] **Public GitHub Repository:** [https://github.com/naskarsayan369-create/age-verification-gateway](https://github.com/naskarsayan369-create/age-verification-gateway)
+- [x] **Public GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)
 - [x] **Deployed Smart Contract:** `0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e`
 - [x] **On-Chain Explorer Verification:** [Verify Contract on Midnight Preprod Explorer](https://indexer.preprod.midnight.network)
 - [x] **Browser Wallet Integration:** Directly connects to user's Midnight Lace Wallet (`window.midnight.mnLace` / `window.midnight.lace`)
@@ -67,10 +67,10 @@ verificationCount.increment(1);
 
 | Environment | Location / Address | Verification / Explorer Link |
 | :--- | :--- | :--- |
-| **Live Web App** | `https://age-verification-gateway-hm6wh4rog.vercel.app/` | [Open Live App](https://age-verification-gateway-hm6wh4rog.vercel.app/) |
+| **Live Web App** | `https://age-verification-gateway-a.vercel.app/` | [Open Live App](https://age-verification-gateway-a.vercel.app/) |
 | **Demo Video** | `https://youtu.be/cSVF8q7BSUM` | [Watch Video Demo](https://youtu.be/cSVF8q7BSUM) |
 | **Preprod Smart Contract** | `0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e` | [Verify Contract on Midnight Preprod Explorer](https://indexer.preprod.midnight.network) |
-| **CI/CD Workflow** | `.github/workflows/ci.yml` | [View GitHub Actions Run](https://github.com/naskarsayan369-create/age-verification-gateway/actions/workflows/ci.yml) |
+| **CI/CD Workflow** | `.github/workflows/ci.yml` | [View GitHub Actions Run](https://github.com/mrBinaryMonk375/age-verification-gateway/actions/workflows/ci.yml) |
 
 > **Note to Reviewers:** Preprod deployment is fully supported in the codebase. If the Lace / 1AM Wallet is stuck on "Wallet is syncing", the dApp falls back to an interactive **Demo Mode** that demonstrates the full age verification lifecycle — deploy, set minimum age, verify birth year, reset, and view results — without requiring a live blockchain connection.
 
@@ -108,7 +108,7 @@ The wallet connector supports:
 **Clone the repository:**
 
 ```bash
-git clone https://github.com/naskarsayan369-create/age-verification-gateway.git
+git clone https://github.com/mrBinaryMonk375/age-verification-gateway.git
 cd age-verification-gateway
 ```
 

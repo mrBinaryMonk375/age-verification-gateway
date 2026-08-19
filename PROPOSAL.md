@@ -1,10 +1,10 @@
-# Product Idea Proposal: Age Verification Gateway (AVG)
+﻿# Product Idea Proposal: Age Verification Gateway (AVG)
 
 ## Executive Summary
 **Project Name:** Age Verification Gateway (AVG)  
 **Target Platform:** Midnight Network (Compact ZK Smart Contracts)  
-**Live Application:** [https://age-verification-gateway-hm6wh4rog.vercel.app/](https://age-verification-gateway-hm6wh4rog.vercel.app/)  
-**GitHub Repository:** [https://github.com/naskarsayan369-create/age-verification-gateway](https://github.com/naskarsayan369-create/age-verification-gateway)  
+**Live Application:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)  
+**GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)  
 **Deployed Contract Address (Preprod):** `0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e`
 
 ---
@@ -129,7 +129,7 @@ The Age Verification Gateway is built as a complete end-to-end dApp consisting o
 - [x] **Compact ZK Contract:** Fully compiled and tested.
 - [x] **Preprod Deployment:** Deployed on Midnight Preprod (`0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e`).
 - [x] **Test Suite:** 8/8 unit tests passing (`npm test`).
-- [x] **Live Web Demo:** Deployed on Vercel (`https://age-verification-gateway-hm6wh4rog.vercel.app/`).
+- [x] **Live Web Demo:** Deployed on Vercel (`https://age-verification-gateway-a.vercel.app/`).
 - [x] **Lace Wallet Integration:** Direct connector to Midnight Lace extension with full session lifecycle.
 - [x] **CI/CD Pipeline:** Automated build and test workflow running on GitHub Actions.
 

@@ -1,4 +1,4 @@
-// Age Verification Gateway - Main App Component
+﻿// Age Verification Gateway - Main App Component
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState, useCallback } from 'react';
@@ -904,7 +904,7 @@ const App: React.FC = () => {
           <div style={{ display: 'flex', gap: 24, fontSize: 13 }}>
             <a href="#" style={{ color: '#6b7280', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fed7aa'} onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}>Privacy Policy</a>
             <a href="#" style={{ color: '#6b7280', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fed7aa'} onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}>Terms of Service</a>
-            <a href="https://github.com/naskarsayan369-create/age-verification-gateway" target="_blank" rel="noopener noreferrer" style={{ color: '#6b7280', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fed7aa'} onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}>GitHub ↗</a>
+            <a href="https://github.com/mrBinaryMonk375/age-verification-gateway" target="_blank" rel="noopener noreferrer" style={{ color: '#6b7280', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fed7aa'} onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}>GitHub ↗</a>
           </div>
         </footer>
       </div>
