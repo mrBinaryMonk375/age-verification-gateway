@@ -1,4 +1,4 @@
-﻿# Age Verification Gateway (AVG)
+# Age Verification Gateway (AVG)
 
 A privacy-preserving zero-knowledge age verification platform built on the Midnight Network using Compact smart contracts.
 
@@ -10,7 +10,7 @@ A privacy-preserving zero-knowledge age verification platform built on the Midni
 ## 🚀 Live Demo, Video & Repository
 
 * 🌐 **Live Web Application:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)
-* 📺 **Demo Video:** [https://youtu.be/cSVF8q7BSUM](https://youtu.be/cSVF8q7BSUM)
+* 📺 **Demo Video:** [https://youtu.be/ozCpCSiMilo](https://youtu.be/ozCpCSiMilo)
 * 📦 **GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)
 * ⚙️ **CI/CD Workflow:** `.github/workflows/ci.yml`
 
@@ -20,7 +20,7 @@ A privacy-preserving zero-knowledge age verification platform built on the Midni
 
 - [x] **Fully Functional Privacy dApp:** Meaningful use of Midnight's Zero-Knowledge privacy model
 - [x] **Live Demo Deployment:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)
-- [x] **Demo Video (Lace Wallet + ZK Circuit Call):** [https://youtu.be/cSVF8q7BSUM](https://youtu.be/cSVF8q7BSUM)
+- [x] **Demo Video (Lace Wallet + ZK Circuit Call):** [https://youtu.be/ozCpCSiMilo](https://youtu.be/ozCpCSiMilo)
 - [x] **Passing Test Suite:** 8/8 Vitest unit tests passing (`npm test`)
 - [x] **CI/CD Pipeline Running:** GitHub Actions workflow running automated build & tests (`.github/workflows/ci.yml`)
 - [x] **Public GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)
@@ -68,7 +68,7 @@ verificationCount.increment(1);
 | Environment | Location / Address | Verification / Explorer Link |
 | :--- | :--- | :--- |
 | **Live Web App** | `https://age-verification-gateway-a.vercel.app/` | [Open Live App](https://age-verification-gateway-a.vercel.app/) |
-| **Demo Video** | `https://youtu.be/cSVF8q7BSUM` | [Watch Video Demo](https://youtu.be/cSVF8q7BSUM) |
+| **Demo Video** | `https://youtu.be/ozCpCSiMilo` | [Watch Video Demo](https://youtu.be/ozCpCSiMilo) |
 | **Preprod Smart Contract** | `0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e` | [Verify Contract on Midnight Preprod Explorer](https://indexer.preprod.midnight.network) |
 | **CI/CD Workflow** | `.github/workflows/ci.yml` | [View GitHub Actions Run](https://github.com/mrBinaryMonk375/age-verification-gateway/actions/workflows/ci.yml) |
 
