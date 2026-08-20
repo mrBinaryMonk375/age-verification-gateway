@@ -235,14 +235,16 @@ age-verification-gateway/
 ---
 
 ## 📸 Platform Screenshots
-<img width="1917" height="978" alt="Screenshot 2026-07-28 120247" src="https://github.com/user-attachments/assets/42935413-c869-4684-bf5f-096a982638eb" />
+<img width="1919" height="974" alt="Screenshot 2026-08-20 055620" src="https://github.com/user-attachments/assets/4d68a989-2a9b-485e-aab3-815578fa855d" />
+
 
 ### Age Verification Portal
 
 Users securely enter their birth year into a privacy-first gateway interface that verifies age eligibility without revealing sensitive personal details on-chain.
 
 ### ZK Proof Generation & Activity Log
-<img width="1917" height="972" alt="Screenshot 2026-07-28 120317" src="https://github.com/user-attachments/assets/6909b831-1c2b-410f-b14b-916c4cba534b" />
+<img width="1919" height="963" alt="Screenshot 2026-08-20 055654" src="https://github.com/user-attachments/assets/acf3cbce-5dee-4f69-ba78-8d29525f8bf9" />
+
 
 
 A clean timeline and activity log showing local zero-knowledge proof generation and verification state in real time.
