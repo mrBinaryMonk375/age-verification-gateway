@@ -60,7 +60,16 @@ following steps:
 
 We prefer all communications to be in English.
 
+## Age Verification Gateway — Threat Model & ZK Invariants
+
+The Age Verification Gateway implements the following cryptographic security invariants:
+
+1. **Zero Data Leakage of Private Inputs**: The user's birth year is processed exclusively within client-side memory during circuit witness execution. No network packet, API payload, or smart contract transaction contains the birth year.
+2. **Deterministic Cryptographic Verification**: The Compact ZK verifier enforces that only mathematically valid proofs evaluate to a `true` state on the public ledger.
+3. **No Centralized Identity Corroboration**: The smart contract does not store, link, or index wallet addresses to specific verification events, eliminating identity correlation attacks.
+4. **Replay & Tamper Resistance**: Proofs are bound to current circuit verification keys and transaction context, preventing proof replay across unauthorized parameters.
+
 ## Suggesting changes
 
-If you have suggestions on how this process could be improved please submit an
-issue or pull request.
+If you have suggestions on how this process could be improved please submit an issue or pull request.
+
