@@ -21,15 +21,18 @@ A privacy-preserving zero-knowledge age verification platform built on the Midni
 - [x] **Fully Functional Privacy dApp:** Meaningful use of Midnight's Zero-Knowledge privacy model
 - [x] **Live Demo Deployment:** [https://age-verification-gateway-a.vercel.app/](https://age-verification-gateway-a.vercel.app/)
 - [x] **Demo Video (Lace Wallet + ZK Circuit Call):** [https://youtu.be/ozCpCSiMilo](https://youtu.be/ozCpCSiMilo)
-- [x] **Passing Test Suite:** 8/8 Vitest unit tests passing (`npm test`)
+- [x] **Passing Test Suite:** 10/10 Vitest unit tests passing (`npm test`)
 - [x] **CI/CD Pipeline Running:** GitHub Actions workflow running automated build & tests (`.github/workflows/ci.yml`)
 - [x] **Public GitHub Repository:** [https://github.com/mrBinaryMonk375/age-verification-gateway](https://github.com/mrBinaryMonk375/age-verification-gateway)
+- [x] **Architecture Specification:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) detailing client ZK prover pipeline
+- [x] **Developer Troubleshooting Runbook:** [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
 - [x] **Deployed Smart Contract:** `0x0200a8e19b4c7d2e5f8a1b3c9d0e2f4a6b8c0d2e4f6a8b1c3d5e7f9a0b2c4d6e`
 - [x] **On-Chain Explorer Verification:** [Verify Contract on Midnight Preprod Explorer](https://indexer.preprod.midnight.network)
 - [x] **Browser Wallet Integration:** Directly connects to user's Midnight Lace Wallet (`window.midnight.mnLace` / `window.midnight.lace`)
 - [x] **Lace Wallet Connect / Disconnect Lifecycle:** Full session management with event prompts and error handling
 - [x] **Product Idea Proposal:** [PROPOSAL.md](PROPOSAL.md) file in repository root answering all 4 required questions
-- [x] **20+ Meaningful Commits:** Verified structured commit history in main branch
+- [x] **10+ Meaningful Commits:** Verified structured commit history in main branch
+
 
 ---
 
