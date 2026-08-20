@@ -140,4 +140,22 @@ describe('Age Gate Contract', () => {
 
     expect(() => sim.verifyAge(2025n)).toThrow();
   });
+
+  it('supports COPPA threshold of 13 for teen digital platforms', () => {
+    // User born 2012, current year 2025 => age = 13 >= 13
+    const sim = new AgeGateSimulator(2012n, 13n);
+    const state = sim.verifyAge(2025n);
+
+    expect(state.lastResult).toBe(true);
+    expect(state.minimumAge).toBe(13n);
+  });
+
+  it('verifies exact threshold boundary when user turns required age this year', () => {
+    // User born 2007, current year 2025 => age = 18 >= 18
+    const sim = new AgeGateSimulator(2007n, 18n);
+    const state = sim.verifyAge(2025n);
+
+    expect(state.lastResult).toBe(true);
+  });
 });
+
