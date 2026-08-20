@@ -6,25 +6,42 @@ import { WitnessContext } from '@midnight-ntwrk/midnight-js-protocol/compact-run
 
 /**
  * The private state for the Age Gate contract.
- * birthYear is kept entirely off-chain - it is the core private datum.
- * It is never written to the ledger, never disclosed in circuit output.
+ * `birthYear` is kept entirely off-chain — it is the core private datum.
+ * It is never written to the ledger, never broadcast over the network,
+ * and never disclosed in the zero-knowledge circuit output.
+ *
+ * @property {bigint} birthYear - User's private year of birth (e.g. 1995n).
  */
 export type AgeGatePrivateState = {
   readonly birthYear: bigint;
 };
 
+/**
+ * Factory function to instantiate an immutable AgeGatePrivateState object.
+ *
+ * @param {bigint} birthYear - The user's birth year.
+ * @returns {AgeGatePrivateState} Immutable private state container.
+ */
 export const createAgeGatePrivateState = (birthYear: bigint): AgeGatePrivateState => ({
   birthYear,
 });
 
 /**
- * Witnesses for the Age Gate contract.
+ * Zero-Knowledge Circuit Witnesses for the Age Gate contract.
  *
- * localBirthYear() reads the birth year from private state.
- * Called inside the ZK circuit - return value is used to compute age
- * but is NEVER written to the ledger or disclosed to observers.
+ * Witnesses provide private data into the ZK proof generation pipeline:
+ * - `localBirthYear()` reads the birth year from local private state.
+ * - Called strictly inside the ZK prover on the client device.
+ * - The return value is used to mathematically evaluate `currentYear - birthYear >= minimumAge`.
+ * - Only the resulting boolean evaluation is disclosed to the public ledger.
  */
 export const witnesses = {
+  /**
+   * Retrieves the user's private birth year within the circuit witness context.
+   *
+   * @param {WitnessContext<Ledger, AgeGatePrivateState>} context - Execution context containing private state.
+   * @returns {[AgeGatePrivateState, bigint]} Tuple of unchanged private state and private birth year value.
+   */
   localBirthYear: ({
     privateState,
   }: WitnessContext<Ledger, AgeGatePrivateState>): [AgeGatePrivateState, bigint] => [
@@ -32,3 +49,4 @@ export const witnesses = {
     privateState.birthYear,
   ],
 };
+
