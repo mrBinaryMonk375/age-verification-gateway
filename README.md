@@ -174,19 +174,24 @@ npm test
 Expected output:
 
 ```text
- ✓ contract/src/test/age-gate.test.ts
-   ✓ should initialize contract with correct public state
-   ✓ should allow adult user to verify age (pass)
-   ✓ should reject underage user verification (fail)
-   ✓ should correctly increment verification count
-   ✓ should verify birth year is stored privately in witness
-   ✓ should allow admin to reset last result
-   ✓ should enforce minimum age boundary conditions (21+)
-   ✓ should reject boundary case 1 year under minimum age
+ RUN  v4.1.9 contract
+
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > initializes with correct public state
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > passes age verification for a user who meets the minimum age
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > rejects age verification for an underage user
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > increments verificationCount on each successful verification
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > does not disclose birth year - only boolean result is in ledger state
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > can reset last result to false
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > works with minimum age 21 (e.g. alcohol restriction)
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > fails for user who is exactly 1 year under minimum age
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > supports COPPA threshold of 13 for teen digital platforms
+ ✓ src/test/age-gate.test.ts > Age Gate Contract > verifies exact threshold boundary when user turns required age this year
 
  Test Files  1 passed (1)
-      Tests  8 passed (8)
+      Tests  10 passed (10)
+   Duration  985ms
 ```
+
 
 ---
 
