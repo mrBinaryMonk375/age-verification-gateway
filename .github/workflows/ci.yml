@@ -1,5 +1,8 @@
 name: CI
 
+# Continuous Integration Pipeline for Midnight Age Verification Gateway
+# Validates: Compact Compilation -> Vitest Suite -> TypeScript Types -> Production Bundle
+
 on:
   push:
     branches: [main, develop]
@@ -11,6 +14,7 @@ jobs:
   contract:
     name: Contract — Compile & Test
     runs-on: ubuntu-latest
+
 
     steps:
       - name: Checkout repository
